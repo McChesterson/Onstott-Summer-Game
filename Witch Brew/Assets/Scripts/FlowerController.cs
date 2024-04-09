@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class FlowerController : MonoBehaviour
 {
-    public HarvestableItem itemHeld;
+    public bool harvested;
+    public PlayerInv.Item itemHeld;
+    
 
+    private void Awake()
+    {
+        harvested = false;
+        itemHeld.itemName = "Berry";
+        
+    }
     private void Start()
     {
-        itemHeld.itemName = "Berry";
+        
     }
-}
-public class HarvestableItem
-{
-    public string itemName;
 }
